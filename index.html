@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arnab Mukhar Biswas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Falling leaves canvas -->
+    <canvas id="leaves-canvas"></canvas>
+
+    <!-- Theme transition overlay -->
+    <div class="theme-transition-overlay" id="theme-overlay"></div>
+
+    <!-- Theme toggle -->
+    <div class="theme-toggle-wrapper">
+        <button id="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Theme">
+            <!-- Moon icon (shown in light mode) -->
+            <svg class="icon-moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+            <!-- Sun icon (shown in dark mode) -->
+            <svg class="icon-sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="5"/>
+                <line x1="12" y1="1" x2="12" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+        </button>
+    </div>
+
+    <div class="container">
+        <header class="container">
+            <h1>Arnab Mukhar Biswas</h1>
+            <p class="subtitle">Full Stack Developer</p>
+
+            <div class="contact">
+                <a href="https://mail.google.com/mail/?view=cm&to=arnabmukhar@gmail.com" target="_blank" rel="noopener noreferrer">arnabmukhar@gmail.com</a>
+                <a href="https://github.com/arnabbiswas100" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/arnab-mukhar-biswas-971b32255" target="_blank">LinkedIn</a>
+            </div>
+        </header>
+
+        <main class="container">
+
+            <section class="fade-in">
+                <h2>Summary</h2>
+                <p>
+                    Full-stack developer with strong backend fundamentals and experience building
+                    production-level applications. Skilled in scalable APIs, real-time systems, and database design.
+                </p>
+            </section>
+
+            <section class="fade-in">
+                <h2>Technical Skills</h2>
+                <ul>
+                    <li><strong>Languages:</strong> C++, Python, JavaScript</li>
+                    <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
+                    <li><strong>Backend:</strong> Node.js, Express.js</li>
+                    <li><strong>Database:</strong> PostgreSQL</li>
+                    <li><strong>Tools:</strong> Git, Linux, REST APIs, WebSockets</li>
+                    <li><strong>Other:</strong> Machine Learning (Logistic Regression)</li>
+                </ul>
+            </section>
+
+            <section class="fade-in">
+                <h2>Projects</h2>
+
+                <div class="project fade-in">
+                    <h3>CyberChat</h3>
+                    <a href="https://cyberchat-production.up.railway.app/" target="_blank">Live Demo</a>
+                    <ul>
+                        <li>Real-time chat using WebSockets</li>
+                        <li>Authentication and modular backend</li>
+                        <li>Persistent messaging system</li>
+                    </ul>
+                </div>
+
+                <div class="project fade-in">
+                    <h3>Xen Budget Tracker</h3>
+                    <a href="https://xen-budget-production.up.railway.app/" target="_blank">Live Demo</a>
+                    <ul>
+                        <li>Full-stack budgeting app with authentication</li>
+                        <li>Custom database schema + APIs</li>
+                        <li>Deployed on Railway</li>
+                    </ul>
+                </div>
+
+                <div class="project fade-in">
+                    <h3>Study Hub</h3>
+                    <ul>
+                        <li>Folder-based notes system with custom markdown engine</li>
+                        <li>Rate limiting + modular backend</li>
+                        <li>Glasmorphic UI</li>
+                        <li>PDF upload and Reading Functionality</li>
+                        <li>JWR Auth System</li>
+                        <li>OpenRouter API based context awareAI Chat Integration with text extraction and retreival
+                            service</li>
+                        <li>Tech stack used - React, Node, Express, Postgres, openrouter API</li>
+                        <li>Live Link - <a href="https://study-hub-yke0.onrender.com"
+                                target="_blank">https://study-hub-yke0.onrender.com</a></li>
+                        <li>GitHub: <a href="https://github.com/arnabbiswas100/Study-Hub"
+                                target="_blank">https://github.com/arnabbiswas100/Study-Hub</a></li>
+
+
+                    </ul>
+                </div>
+
+                <div class="project fade-in">
+                    <h3>IPL Winner Predictor</h3>
+                    <ul>
+                        <li>Logistic regression ML model</li>
+                        <li>Data preprocessing and prediction</li>
+                    </ul>
+                </div>
+
+            </section>
+
+            <section class="fade-in">
+                <h2>Education</h2>
+                <p>B.Tech in Mechatronics Engineering</p>
+                <p>IIIT Bhagalpur (2023–2027)</p>
+            </section>
+
+        </main>
+        <div id="toast"></div>
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>
