@@ -657,45 +657,54 @@ p {
 /* ===== RESPONSIVE — TABLET (≤ 768px) ===== */
 @media (max-width: 768px) {
     .container {
-        padding: 20px 18px;
+        padding: 20px 16px;
     }
 
     header {
         margin-bottom: 40px;
-        padding-top: 80px; /* room for toggle */
+        padding-top: 80px;
     }
 
     h1 {
-        font-size: 2.8rem;
+        font-size: clamp(2.2rem, 8vw, 2.8rem);
         letter-spacing: -1px;
+        word-break: break-word;
+        overflow-wrap: break-word;
     }
 
     h1::after {
-        display: none; /* cleaner on mobile */
+        display: none;
     }
 
     .subtitle {
-        font-size: 0.95rem;
+        font-size: clamp(0.85rem, 2.5vw, 0.95rem);
         letter-spacing: 0.3px;
+        padding: 0 10px;
+        word-break: break-word;
     }
 
     .contact {
         gap: 10px;
         margin-top: 25px;
+        padding: 0 5px;
     }
 
     .contact a {
-        padding: 10px 18px;
-        font-size: 0.82rem;
+        padding: 12px 20px;
+        font-size: 0.85rem;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        word-break: break-all;
     }
 
     section {
-        padding: 25px 20px;
+        padding: 22px 18px;
         border-radius: 18px;
-        margin-bottom: 25px;
+        margin-bottom: 22px;
     }
 
-    /* Disable hover lift on touch devices for sections */
     section:hover {
         transform: none;
     }
@@ -705,12 +714,11 @@ p {
     }
 
     .project {
-        padding: 20px 18px;
+        padding: 18px 16px;
         border-radius: 16px;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
     }
 
-    /* Disable hover transforms on touch */
     .project:hover {
         transform: none;
     }
@@ -721,21 +729,26 @@ p {
 
     .project a {
         font-size: 0.82rem;
-        padding: 8px 14px;
+        padding: 10px 16px;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
 
     #toast {
-        left: 20px;
-        right: 20px;
-        bottom: 20px;
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
         text-align: center;
         font-size: 0.88rem;
         padding: 14px 20px;
+        border-radius: 14px;
     }
 
     .theme-toggle-wrapper {
-        top: 18px;
-        right: 18px;
+        top: 16px;
+        right: 16px;
     }
 
     #theme-toggle {
@@ -749,79 +762,106 @@ p {
     }
 
     ul {
-        margin-left: 12px;
+        margin-left: 10px;
     }
 
     li {
-        padding-left: 14px;
+        padding-left: 16px;
         font-size: 0.92rem;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    p {
+        word-break: break-word;
+        overflow-wrap: break-word;
     }
 }
 
 /* ===== RESPONSIVE — MOBILE (≤ 480px) ===== */
 @media (max-width: 480px) {
     .container {
-        padding: 15px 14px;
+        padding: 14px 12px;
     }
 
     header {
-        padding-top: 75px;
-        margin-bottom: 30px;
+        padding-top: 72px;
+        margin-bottom: 28px;
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: clamp(1.8rem, 9vw, 2.2rem);
         letter-spacing: -0.5px;
     }
 
     .subtitle {
-        font-size: 0.85rem;
+        font-size: 0.82rem;
         margin-top: 12px;
+        padding: 0 5px;
     }
 
     .contact {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
         gap: 8px;
         margin-top: 20px;
+        padding: 0;
     }
 
     .contact a {
         width: 100%;
-        max-width: 260px;
         text-align: center;
-        padding: 12px 16px;
+        padding: 14px 16px;
         font-size: 0.85rem;
+        min-height: 48px;
+        border-radius: 14px;
     }
 
     section {
-        padding: 20px 16px;
+        padding: 18px 14px;
         border-radius: 16px;
-        margin-bottom: 20px;
+        margin-bottom: 16px;
     }
 
     h2 {
-        font-size: 1.35rem;
+        font-size: 1.3rem;
+        margin-bottom: 16px;
+    }
+
+    h2::after {
+        bottom: -6px;
+        height: 2px;
     }
 
     .project {
         padding: 16px 14px;
         border-radius: 14px;
+        margin-bottom: 14px;
     }
 
     .project h3 {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
+        margin-bottom: 6px;
     }
 
     .project a {
         width: 100%;
         text-align: center;
-        padding: 10px 14px;
+        padding: 12px 14px;
+        margin: 6px 0 10px 0;
+        min-height: 48px;
+        border-radius: 12px;
     }
 
     li {
-        font-size: 0.88rem;
+        font-size: 0.86rem;
         margin-bottom: 6px;
+        line-height: 1.6;
+    }
+
+    ul {
+        margin-left: 5px;
+        margin-top: 10px;
     }
 
     #theme-toggle {
@@ -838,29 +878,44 @@ p {
 /* ===== RESPONSIVE — VERY SMALL (≤ 360px) ===== */
 @media (max-width: 360px) {
     .container {
-        padding: 12px 10px;
+        padding: 10px 8px;
+    }
+
+    header {
+        padding-top: 68px;
     }
 
     h1 {
-        font-size: 1.7rem;
+        font-size: clamp(1.5rem, 10vw, 1.8rem);
     }
 
     .subtitle {
-        font-size: 0.8rem;
+        font-size: 0.78rem;
     }
 
     section {
-        padding: 16px 12px;
+        padding: 14px 10px;
+        border-radius: 14px;
     }
 
     .project {
-        padding: 14px 12px;
+        padding: 14px 10px;
+        border-radius: 12px;
+    }
+
+    .contact a {
+        padding: 12px 12px;
+        font-size: 0.82rem;
+    }
+
+    li {
+        font-size: 0.82rem;
+        padding-left: 14px;
     }
 }
 
 /* ===== TOUCH DEVICE OPTIMIZATIONS ===== */
 @media (hover: none) and (pointer: coarse) {
-    /* Disable hover effects that look bad on touch */
     section:hover {
         transform: none;
         box-shadow: 0 8px 32px var(--glass-shadow), var(--glass-inner-shadow), inset 0 -1px 0 var(--divider);
@@ -881,17 +936,15 @@ p {
 
     .contact a:hover {
         transform: none;
-    }
-
-    li:hover {
-        transform: none;
-    }
-
-    li:hover::before {
-        transform: none;
+        box-shadow: 0 4px 16px var(--glass-shadow), var(--glass-inner-shadow);
     }
 
     .project a:hover {
+        transform: none;
+    }
+
+    li:hover,
+    li:hover::before {
         transform: none;
     }
 }

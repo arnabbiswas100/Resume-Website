@@ -44,7 +44,7 @@ if (themeToggle) {
 const canvas = document.getElementById('leaves-canvas');
 const ctx = canvas ? canvas.getContext('2d') : null;
 let leaves = [];
-const LEAF_COUNT = 25;
+const LEAF_COUNT = window.innerWidth <= 480 ? 12 : 25;
 
 function resizeCanvas() {
     if (!canvas) return;
