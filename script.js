@@ -239,7 +239,7 @@ console.log(`
 const subtitle = document.querySelector(".subtitle");
 
 if (subtitle) {
-    const text = "Full-Stack Developer · Node.js · Express · PostgreSQL · Machine Learning";
+    const text = "Full-Stack Developer · Node.js · Express · PostgreSQL · Machine Learning · Artificial Intelligence";
     subtitle.textContent = "";
 
     // Add blinking cursor
