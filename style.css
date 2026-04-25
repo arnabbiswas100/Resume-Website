@@ -287,9 +287,7 @@ section::before {
 
 section:hover {
     transform: translateY(-6px);
-    box-shadow:
-        0 20px 50px var(--glass-shadow-strong),
-        var(--glass-inner-shadow);
+    box-shadow: 0 8px 32px var(--glass-shadow), var(--glass-inner-shadow);
     background: var(--glass-bg-strong);
 }
 
@@ -416,13 +414,8 @@ p {
 
 .project:hover {
     transform: translateY(-8px) scale(1.015);
-    box-shadow: 0 25px 50px var(--glass-shadow-strong), var(--glass-inner-shadow);
+    box-shadow: 0 8px 32px var(--glass-shadow), var(--glass-inner-shadow);
     background: var(--glass-bg-strong);
-    border-color: rgba(255, 255, 255, 0.3);
-}
-
-[data-theme="dark"] .project:hover {
-    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .project h3 {
@@ -442,7 +435,7 @@ p {
 
 .project a {
     display: inline-block;
-    margin: 8px 0 12px 0;
+    margin: 8px 8px 12px 0;
     color: var(--text-muted);
     text-decoration: none;
     font-weight: 500;
@@ -454,7 +447,12 @@ p {
     border-radius: 50px;
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
     transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-theme="dark"] .project a {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .project a:hover {
@@ -664,7 +662,7 @@ p {
 
     header {
         margin-bottom: 40px;
-        padding-top: 60px; /* room for toggle */
+        padding-top: 80px; /* room for toggle */
     }
 
     h1 {
@@ -767,7 +765,7 @@ p {
     }
 
     header {
-        padding-top: 55px;
+        padding-top: 75px;
         margin-bottom: 30px;
     }
 
